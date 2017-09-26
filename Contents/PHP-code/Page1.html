@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title> LOGIN </title>
+<link rel="stylesheet" href="style.css">
+<body background="background.jpg">
+   <div class="imgcontainer">
+    	<img src="logo.png" alt="IITC_LOGO" class="logo">
+
+   </div>
+   
+
+   <div class="form">
+   <form name="iform" action="process.php" method="post" onsubmit="return(check());">
+     <div class="container">
+	<label><h3 style="width: 50%; margin: 0 auto;"> LOG-IN </h3></label><br>
+	<label> <b> USER-ID: </b></label><br>
+	<input type="text" name="name" placeholder="Enter UserID" required> <br>
+	<label> <b> PASSWORD: </b></label><br>
+	<input type="password" name="pwd" placeholder="Enter Password" required><br>
+
+	<label> <b>  <b></label><br>
+	<input type="radio" name="usr" <?php if (isset($usr) && $usr=="admin") echo "checked";  value="admin"?> ADMIN
+	<input type="radio" name="usr" <?php if (isset($usr) && $usr=="rep")   echo "checked";  value="rep"  ?> RECEPTIONIST
+	<input type="radio" name="usr" <?php if (isset($usr) && $usr=="mgt")   echo "checked";  value="mgt"  ?> MANGT
+
+	<br></br>
+	<input type="submit" id="btn" value="submit" onclick="check()"/>
+     </div>
+   </form>
+</div>
+</body>
+</html> 
